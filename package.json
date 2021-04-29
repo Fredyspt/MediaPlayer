@@ -1,0 +1,27 @@
+{
+  "name": "mediaplayer",
+  "version": "1.0.0",
+  "description": "Media Player for a Video Player web application",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fredyspt/MediaPlayer.git"
+  },
+  "keywords": [
+    "Media",
+    "Video",
+    "Typescript"
+  ],
+  "author": "fredyspt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fredyspt/MediaPlayer/issues"
+  },
+  "homepage": "https://github.com/Fredyspt/MediaPlayer#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
