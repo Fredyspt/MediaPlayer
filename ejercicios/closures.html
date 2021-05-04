@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <a href="/ejercicios/">Back</a>
+    <p><em>Abre la consola</em></p>
+
+    <script>
+        //Closures 
+    
+        (function() {
+            let color = 'green';
+
+            function printColor(){
+                console.log(color);
+            }
+
+            printColor();
+        })();
+
+        // Funciones que regresan funciones
+        function makeColorPrinter(color){
+            let colorMessage = `The color is ${color}`;
+
+            return function() {
+                console.log(colorMessage);
+            }
+        }
+
+        let greenColorPrinter = makeColorPrinter('green');
+        greenColorPrinter();
+
+        // Variables privadas
+        function makeCounter(n){
+            let count = n;
+
+            return {
+                increase: () => {
+                    count++;
+                },
+                decrease: () => {
+                    count--;
+                },
+                getCount: () => {
+                    return count;
+                }
+            };
+        }
+
+        let counter = makeCounter(7);
+        console.log('The counter is: ', counter.getCount());
+        counter.increase();
+        console.log('The counter is: ', counter.getCount());
+        counter.increase();
+        console.log('The counter is: ', counter.getCount());
+        counter.decrease();
+        console.log('The counter is: ', counter.getCount());
+    </script>
+</body>
+</html>
