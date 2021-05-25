@@ -8,6 +8,7 @@ class MediaPlayer {
     }
   
     _initPlugins(){
+        // crea objeto para limitar acceso a metodos
         const player = {
             play: () => this.play(),
             pause: () => this.pause(),
