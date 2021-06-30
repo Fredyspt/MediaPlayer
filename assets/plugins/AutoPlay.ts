@@ -1,9 +1,12 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPlay{
-    run(player){
-        if(!player.muted){
+    constructor() {}
+    run(player: MediaPlayer){
+        if(!player.media.muted){
             // Setters no se pueden llamar como una funcion, se les tiene
             // que asignar el valor como una variable.
-            player.mutePlayer = true;
+            player.media.muted = true;
         }
         player.play();
     }

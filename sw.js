@@ -1,4 +1,4 @@
-const VERSION = "v1"
+const VERSION = "v1";
 
 self.addEventListener('install', event => {
     // crear precache, una lista de recursos que mantenga en cache
