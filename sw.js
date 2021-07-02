@@ -46,6 +46,13 @@ async function cachedResponse(request) {
 async function updateCache(request) {
     const cache = await caches.open(VERSION)
     const response = await fetch(request)
-    // actualiza cache
-    return cache.put(request, response)
+
+    // Mientras el estado de la respuesta no sea una respuesta parcial (codigo 206)
+    // Actualiza el cache 
+    if(response.status !== 206){
+        cache.put(request, response.clone());
+    }
+
+    // Regresa el cache existente o el actualizado dependiendo del codigo de la respuesta
+    return cache
 }
