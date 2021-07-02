@@ -27,5 +27,8 @@
   },
   "browserslist": [
     "last 1 Chrome version"
-  ]
+  ],
+  "dependencies": {
+    "@fredyspt/mediaplayer": "^1.0.0"
+  }
 }

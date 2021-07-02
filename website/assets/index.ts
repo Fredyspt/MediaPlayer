@@ -1,7 +1,7 @@
-import MediaPlayer from './MediaPlayer'
-import AutoPlay from './plugins/AutoPlay'
-import AutoPause from './plugins/AutoPause'
-import Ads from './plugins/Ads';
+import MediaPlayer from '@fredyspt/mediaplayer'
+import AutoPlay from '@fredyspt/mediaplayer/lib/plugins/AutoPlay'
+import AutoPause from '@fredyspt/mediaplayer/lib/plugins/AutoPause'
+import Ads from '@fredyspt/mediaplayer/lib/plugins/Ads';
 
 const video = document.querySelector("video");
 const player = new MediaPlayer({
